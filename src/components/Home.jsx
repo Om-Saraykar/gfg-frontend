@@ -11,7 +11,7 @@ const Home = ({ isDarkMode }) => {
       <div className="flex flex-col items-center min-h-screen sm:p-4 gap-[200px]">
         <HeroSection />
         <WorkshopFeatures />
-        <AboutPyHack />
+        <AboutPyHack isDarkMode={isDarkMode} />
         <FAQ />
       </div>
       <Footer />

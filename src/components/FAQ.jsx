@@ -48,7 +48,7 @@ const FAQ = () => {
       <div className='w-full'>
         <div className="max-w-[860px] space-y-4 ml-auto">
           {faqsToDisplay.map((faq, index) => (
-            <div key={index} className="px-4 bg-[#fafafa] rounded-[12px]">
+            <div key={index} className="px-4 bg-[#fafafa] dark:bg-[#2d2d2d] rounded-[12px]">
               <button
                 className="w-full text-left py-4 text-lg flex justify-between items-center focus:outline-none"
                 onClick={() => toggleFAQ(index)}
@@ -64,7 +64,7 @@ const FAQ = () => {
                   transition: 'max-height 0.3s ease-in-out',
                 }}
               >
-                <p className="py-4 text-gray-600 sm:text-[20px] text-[16px]">
+                <p className="py-4 text-gray-600 dark:text-[#e0e0e0] sm:text-[20px] text-[16px]">
                   {faq.answer}
                 </p>
               </div>

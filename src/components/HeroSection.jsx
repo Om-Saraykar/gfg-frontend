@@ -1,13 +1,13 @@
 import React from "react";
 import images from "../constants/images";
 
-const HeroSection = () => {
+const HeroSection = ( {isDarkMode} ) => {
   return (
-    <div className={`w-full flex flex-col items-center py-[50px]`}>
+    <div className={`w-full flex flex-col items-center py-[50px] mt-[50px]`}>
 
       <div className="flex justify-start w-full lg:w-[90%] sm:absolute">
-        <div className="w-full  md:w-[880px] p-4 flex flex-col items-start justify-center bg-white gap-[36px]">
-          <div className="bg-[#f0f0f0] rounded-full py-[10px] px-[20px] flex items-center gap-[20px] w-full sm:w-auto">
+        <div className="w-full  md:w-[880px] p-4 flex flex-col items-start justify-center bg-white dark:bg-[#232323] gap-[36px]">
+          <div className="bg-[#f0f0f0] dark:text-black rounded-full py-[10px] px-[20px] flex items-center gap-[20px] w-full sm:w-auto">
             <div className="overflow-hidden">
               <p className="text-[16px] marquee sm:hidden z-10">
                 Introducing an era of new and exciting game development
@@ -16,16 +16,18 @@ const HeroSection = () => {
                 Introducing an era of new and exciting game development
               </p>
             </div>
-            <img src={images.dot} alt="" className="h-[6px] w-[6px]" />
+            <img 
+              src={images.dot} 
+              alt="" className="h-[6px] w-[6px]" />
             <a href="#" className="text-[#616161] font-bold hidden md:inline-block">Read more</a>
             <img src={images.rightArrow} alt="" className="h-[12px] w-[18px]" />
           </div>
 
-          <p className="text-[35px] sm:text-[45px] md:text-[55px] lg:text-[60px] leading-[1] font-semibold text-black">
+          <p className="text-[35px] sm:text-[45px] md:text-[55px] lg:text-[60px] leading-[1] font-semibold text-black dark:text-white">
             Access the full power of Python Game Development.
           </p>
 
-          <p className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-medium text-[#636161]">
+          <p className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-medium text-[#636161] dark:text-[#b0b0b0]">
             The ultimate game dev workshop for Python enthusiasts. Learn, create, and innovate with the most versatile pl.
           </p>
 

@@ -10,10 +10,17 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
   };
 
   return (
-    <nav className="w-full py-4 md:px-10 px-6 flex justify-between items-center  dark:bg-gray-900 z-20">
+    <nav
+      className={`fixed w-full py-4 md:pr-10 pr-6 flex justify-between items-center
+      ${isDarkMode ? 'bg-[#232323] text-white' : 'bg-white text-gray-800'} 
+      ${isMenuOpen ? 'shadow-none' : (isDarkMode ? 'shadow-customDark' : 'shadow-md')}
+      z-[9999] top-0`}
+    >
       {/* Logo */}
-      <div className="flex items-center">
-        <img src={images.gfgLogo} alt="Logo" className="h-10 mr-3" />
+      <div className="flex items-center lg:pl-[6.5%] pl-5">
+        {isDarkMode 
+          ? <img src={images.gfgWhiteLogo} alt="Logo" className="h-10 mr-3" />
+          : <img src={images.gfgLogo} alt="Logo" className="h-10 mr-3" />}
       </div>
 
       {/* Menu for larger screens */}
@@ -21,7 +28,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
         <button className="text-[20px] font-semibold">Products</button>
         <button className="text-[20px] font-semibold">Resources</button>
         <button className="text-[20px] font-semibold">Developers</button>
-        <button className="bg-[#121316] text-white text-[20px] rounded-full px-6 py-1 hover:bg-gray-800">
+        <button className="bg-[#121316] text-white dark:bg-white font-semibold dark:text-black text-[20px] rounded-full px-6 py-1 hover:bg-gray-800">
           Open App
         </button>
 
@@ -32,7 +39,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           {isDarkMode ? (
             <MoonIcon className="w-8 h-8 text-white" />
           ) : (
-            <SunIcon className="w-9 h-9 text-yellow-500" />
+            <SunIcon className="w-8 h-8 text-black" />
           )}
         </button>
       </div>
@@ -46,7 +53,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           {isDarkMode ? (
             <MoonIcon className="w-8 h-8 text-white" />
           ) : (
-            <SunIcon className="w-9 h-9 text-yellow-500" />
+            <SunIcon className="w-8 h-8 text-black" />
           )}
         </button>
 
@@ -60,7 +67,8 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-lg z-20">
+        <div className={`md:hidden absolute top-16 left-0 w-full 
+          ${isDarkMode ? 'bg-[#232323]' : 'bg-white'} shadow-lg z-[9999]`}>
           <div className="flex flex-col items-center justify-center gap-6 py-4">
             <button className="text-[20px] font-semibold">Products</button>
             <button className="text-[20px] font-semibold">Resources</button>

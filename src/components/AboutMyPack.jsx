@@ -1,19 +1,19 @@
 import React from 'react';
 import images from '../constants/images';
 
-const AboutPyHack = () => {
+const AboutPyHack = ( {isDarkMode} ) => {
   return (
-    <section className="w-[90%] bg-white dark:bg-black flex flex-col gap-[3rem]">
+    <section className="w-[90%] flex flex-col gap-[3rem]">
 
       <div className='flex flex-col gap-4'>
-        <h1 className="lg:text-[60px] md:text-[50px] sm:text-[40px] text-[35px] font-semibold text-gray-900">About PyHack</h1>
-        <p className="lg:text-[32px] md:text-[26px] sm:text-[22px] text-[18px] font-medium text-[#636161]">
+        <h1 className="lg:text-[60px] md:text-[50px] sm:text-[40px] text-[35px] font-semibold">About PyHack</h1>
+        <p className="lg:text-[32px] md:text-[26px] sm:text-[22px] text-[18px] font-medium text-[#636161] dark:text-[#b0b0b0]">
           PyHack is a dynamic, community-driven workshop designed to teach game development using Python.
         </p>
         <div className="flex flex-col justify-center">
           <div className="flex items-center group">
-            <p className='text-black sm:text-[16px] text-[14px] transition-transform duration-300 transform group-hover:scale-105 hover:underline hover:cursor-pointer'>Learn More</p>
-            <img src={images.blackRightArrow} alt="" className='h-[13px] ml-3 transition-transform duration-300 transform group-hover:translate-x-1' />
+            <p className='text-black dark:text-white sm:text-[16px] text-[14px] transition-transform duration-300 transform group-hover:scale-105 hover:underline hover:cursor-pointer'>Learn More</p>
+            <img src={ images.whiteRightArrow} alt="" className='h-[13px] ml-3 transition-transform duration-300 transform group-hover:translate-x-1' />
           </div>
         </div>
       </div>
@@ -32,13 +32,13 @@ const AboutPyHack = () => {
           </div>
 
           <div className="bg-white dark:bg-gray-600 rounded-lg shadow-sm hidden md:inline-block transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <img src={images.smile} alt="" />
+            <img src={ isDarkMode ? images.smileDark : images.smile} alt="" className='' />
           </div>
 
         </div>
 
         <div className="h-full shadow-sm rounded-[20px] transition-transform duration-300 hover:scale-105">
-          <img src={images.greenSmile} alt="" className='' />
+          <img src={ isDarkMode ? images.greenSmileDark : images.greenSmile} alt="" className='' />
         </div>
         
       </div>

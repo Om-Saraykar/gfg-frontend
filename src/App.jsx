@@ -19,7 +19,7 @@ const App = () => {
   };
 
   return (
-    <div className={`min-h-screen font-inter ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div className={`min-h-screen font-inter ${isDarkMode ? 'bg-[#232323] text-white' : 'bg-white text-black'}`}>
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Router>
         <Routes>

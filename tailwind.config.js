@@ -26,7 +26,7 @@ export const theme = {
     },
     boxShadow: {
       'custom': '0px 4px 30px 0px #00000040',
-      'custom-dark': '0px 4px 20px 0px #ffffff1a'
+      'customDark': '0px 0px 20px 0px #ffffff1a'
 
     },
     screens: {
